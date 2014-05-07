@@ -1,0 +1,13 @@
+<html>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <head></head>
+    <body>
+        <h3>{% block headTitle %}{% endblock %}</h3>
+        {% block content %} {% endblock %}
+
+        {% block footer %}
+            <h3>嘿，这是继承了模版</h3>
+        {% endblock%}
+    </body>
+</html>

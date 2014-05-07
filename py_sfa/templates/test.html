@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}用户信息{% endblock %}
+
+
+<h3>{% block headTitle %}用户信息：{% endblock %}</h3>
+
+{% block content %}
+<p>姓名：{{name}}</p>
+<p>年龄：{{age}}</p>
+{% endblock %}
