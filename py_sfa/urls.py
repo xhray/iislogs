@@ -14,4 +14,5 @@ urlpatterns = patterns('',
     #url(r'^admin/', include(admin.site.urls)),
     url(r'^test/$', test),
     url(r'^iislogs/list$', iislogs_views.list),
+    url(r'^iislogs/listhitstats$', iislogs_views.listhitstats),
 )

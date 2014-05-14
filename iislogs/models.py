@@ -15,3 +15,18 @@ class iis_logs(Document):
     date = DateTimeField()
     userAgent = StringField()
     responseStatus = IntField()
+
+class hit_stat_key(Document):
+    url = StringField()
+    year = IntField()
+    month = IntField()
+    day = IntField()
+
+
+class hit_stat_result(Document):
+    count = IntField()    
+
+
+class hit_stats(Document):
+    id = StringField(primary_key=True)
+    value = StringField()

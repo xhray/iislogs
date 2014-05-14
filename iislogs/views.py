@@ -3,5 +3,9 @@ from iislogs.models import *
 
 def list(request):
     total = iis_logs.objects().count()
-    entities = iis_logs.objects(url='/c/client/home/edit/702505')
+    entities = iis_logs.objects()
     return render_to_response('list.html', locals())
+
+def listhitstats(request):
+	entities = hit_stats.objects()
+	return render_to_response('listhitstats.html', locals())

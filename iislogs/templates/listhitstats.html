@@ -1,0 +1,32 @@
+<p>{% extends "base.html" %}
+{% block title %}IIS日志{% endblock %}
+<h3>{% block headTitle %}IIS日志统计信息：{% endblock %}</h3>
+{% block content %}
+<table border="1">
+	<thead>
+		<tr>
+			<td>
+				请求url
+			</td>
+			<td>
+				响应时间
+			</td>
+			<td>
+				次数
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+	{% for entity in entities %}
+		<tr>
+			<td>
+				{{ entity.id }}
+			</td>	
+			<td>
+				{{ entity.value }}
+			</td>	
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endblock %}</p>
