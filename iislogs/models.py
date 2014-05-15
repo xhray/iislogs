@@ -18,9 +18,9 @@ class iis_logs(Document):
 
 class hit_stat_key(Document):
     url = StringField()
-    year = IntField()
-    month = IntField()
-    day = IntField()
+    year = StringField()
+    month = StringField()
+    day = StringField()
 
 
 class hit_stat_result(Document):
