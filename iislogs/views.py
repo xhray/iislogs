@@ -7,5 +7,5 @@ def list(request):
     return render_to_response('list.html', locals())
 
 def listhitstats(request):
-	entities = hit_stats.objects()
+	entities = hit_stats.objects().order_by('-value.count')
 	return render_to_response('listhitstats.html', locals())

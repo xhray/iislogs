@@ -1,4 +1,4 @@
-<p>{% extends "base.html" %}
+{% extends "base.html" %}
 {% block title %}IIS日志{% endblock %}
 <h3>{% block headTitle %}IIS日志统计信息：{% endblock %}</h3>
 {% block content %}
@@ -20,13 +20,16 @@
 	{% for entity in entities %}
 		<tr>
 			<td>
-				{{ entity.id }}
+				{{ entity.id.url }}
 			</td>	
 			<td>
-				{{ entity.value }}
+				{{ entity.id.year | floatformat }}-{{ entity.id.month | floatformat }}-{{ entity.id.day | floatformat }}
+			</td>	
+			<td>
+				{{ entity.value.count | floatformat }}
 			</td>	
 		</tr>
 	{% endfor %}
 	</tbody>
 </table>
-{% endblock %}</p>
+{% endblock %}
